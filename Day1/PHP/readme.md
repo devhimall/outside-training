@@ -41,6 +41,6 @@ You are tasked with creating a simple PHP web application that allows users to s
 
 ## Actual Output Screenshots
 
-![Alt text](/Day1/assets/php1.png)
-![Alt text](/Day1/assets/php2.png)
-![Alt text](/Day1/assets/php3.png)
+![Alt text](/Day1/PHP/assets/php1.png)
+![Alt text](/Day1/PHP/assets/php2.png)
+![Alt text](/Day1/PHP/assets/php3.png)
