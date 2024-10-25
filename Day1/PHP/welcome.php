@@ -63,8 +63,8 @@
     </p>
 
     <div>
-        <a href="/outside-training/Day1">Back</a>
-        <a href="/outside-training/Day1">Next</a>
+        <a href="/outside-training/Day1/PHP">Back</a>
+        <a href="/outside-training/Day1/PHP">Next</a>
     </div>
 </body>
 
