@@ -27,4 +27,20 @@ You are tasked with creating a simple PHP web application that allows users to s
 - **Favorite Color**: Blue
 
 ## Expected Output
+    Hello, Alice!
+    You are an adult.
+    Blue is calming.
+    Here is a list of the years you have lived:
+    1
+    2
+    3
+    4
+    5
+    ...
+    25
 
+## Actual Output Screenshots
+
+![Alt text](/Day1/assets/php1.png)
+![Alt text](/Day1/assets/php2.png)
+![Alt text](/Day1/assets/php3.png)
