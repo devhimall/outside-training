@@ -6,7 +6,7 @@ As we know that, HTML element can be select in different way. Pseudo-class keywo
 
 'padding-inline', padding-block, padding-inline-end, padding-inline-start are css display properties, which as basically used for controlling padding relative to the inline or block dimensions, regardless of the text direction. More specifically, the css property padding-inline-start and padding-inline-end adjust padding on the start and end of the inline axis whereas padding-block-start and padding-block-end property are use to add padding at the start and end of the block axis and they adapt vertically.
 
-````HTML
+```HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,20 @@ As we know that, HTML element can be select in different way. Pseudo-class keywo
     </div>
 </body>
 </html>
-````
+```
 
 ## 3. Explore box-sizing property and how it helps to create an alternate box model. Show examples.
 
+Simply, box-sizing sets how the total width and height of an element is calculated and this can be manipulate using box-sizing css property and it has two different value either content-box or border-box, but in child environment, it can be access by using inherit, initial, revert, unset, etc.
+
+```HTML
+    box-sizing: border-box;
+box-sizing: content-box;
+
+/* Global values */
+box-sizing: inherit;
+box-sizing: initial;
+box-sizing: revert;
+box-sizing: revert-layer;
+box-sizing: unset;
+```
