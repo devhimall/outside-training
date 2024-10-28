@@ -33,7 +33,7 @@ As we know that, HTML element can be select in different way. Pseudo-class keywo
     </div>
 </body>
 </html>
-```
+````
 
 ## 3. Explore box-sizing property and how it helps to create an alternate box model. Show examples.
 
