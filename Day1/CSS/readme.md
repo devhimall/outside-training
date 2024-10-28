@@ -50,10 +50,12 @@ box-sizing: revert;
 box-sizing: revert-layer;
 box-sizing: unset;
 ```
-## 4. Identify some block elements and inline-elements. Show your process. (at least 10 elements each)
-Block and inline are two different elements in html which are different behaviour. Block elements take full width of its parent element whereas inline elements take only full width of its content. For example, <p> and <div> are block elements whereas <spab> and <a> are the inline elements. There are so many block and inline elements available some of them are listed below:
-1. Block Elements
-<div>, <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ul>, <ol>, <li>, <table>, <section>, <article>, <header>, <footer>, <aside>, <nav>, <figure>, <figcaption>, <form>, <blockquote>, <hr>, and so on
-2. Inline Elements
-`<span>`, `<a>`, `<strong>`, `<em>`, `<img>`, `<label>`, `<abbr>`, `<cite>`, `<code>`, `<input>`, `<button>`, `<small>`, `<sup>`, `<sub>`, `<b>`, `<i>`, `<u>`, `<time>`, `<mark>`, `<q>`
 
+## 4. Identify some block elements and inline-elements. Show your process. (at least 10 elements each)
+
+Block and inline are two different elements in html which are different behaviour. Block elements take full width of its parent element whereas inline elements take only full width of its content. For example, <p> and <div> are block elements whereas <spab> and <a> are the inline elements. There are so many block and inline elements available some of them are listed below:
+
+1. Block Elements
+   "<div>, <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ul>, <ol>, <li>, <table>, <section>, <article>, <header>, <footer>, <aside>, <nav>, <figure>, <figcaption>, <form>, <blockquote>, <hr>, and so on"
+2. Inline Elements
+   "`<span>`, `<a>`, `<strong>`, `<em>`, `<img>`, `<label>`, `<abbr>`, `<cite>`, `<code>`, `<input>`, `<button>`, `<small>`, `<sup>`, `<sub>`, `<b>`, `<i>`, `<u>`, `<time>`, `<mark>`, `<q>`"  
