@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Importing the database connection file -->
+<?php
+include './db_connect.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+$sql = "SELECT name, math_grade, science_grade, english_grade FROM students";
+$result = $conn->query($sql);
 
-<body>
-    <h2>Hello Himal Tamang how are you a?</h2>
-</body>
+// Check if database table contains data
+if ($result && $result->num_rows > 0) {
+    $student_data = $result->fetch_all(MYSQLI_ASSOC);
 
-</html>
+    //checking if array is dimensional or multidimensional array.
+    if (isset($student_data[0]) && is_array($student_data[0])) {
+        echo "The array is a multidimensional array.";
+    } else {
+        echo "The array is a associative array";
+    }
+} else {
+    echo "There is no results";
+}
+
+// Close the connection
+$conn->close();
+?>
