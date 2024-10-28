@@ -1,3 +1,3 @@
 ## Results
 
-![Alt text](./Images/result1.png)
+![Alt text](/Day2/PHP/Images/result1.png)
