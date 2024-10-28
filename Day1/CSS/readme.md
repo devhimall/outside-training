@@ -7,7 +7,7 @@ As we know that, HTML element can be select in different way. Pseudo-class keywo
         <div>
             <p class="exampleText">Example of padding-inline-start and padding-inline-end</p>
         </div>
-    ```CSS
+
         div {
             background-color: #FF0000;
             width: 300px;
@@ -19,7 +19,7 @@ As we know that, HTML element can be select in different way. Pseudo-class keywo
         padding-inline-start: 200px;
         background-color: #000fff;
         }
-
+```html
 
 ## 3. Explore box-sizing property and how it helps to create an alternate box model. Show examples.
    
