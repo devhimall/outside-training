@@ -40,7 +40,7 @@ As we know that, HTML element can be select in different way. Pseudo-class keywo
 Simply, box-sizing sets how the total width and height of an element is calculated and this can be manipulate using box-sizing css property and it has two different value either content-box or border-box, but in child environment, it can be access by using inherit, initial, revert, unset, etc.
 
 ```HTML
-    box-sizing: border-box;
+box-sizing: border-box;
 box-sizing: content-box;
 
 /* Global values */
