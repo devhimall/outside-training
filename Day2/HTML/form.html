@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Day1/HTML/Styles/index.css" />
+    <link rel="stylesheet" href="/Day2/HTML/styles/form.css" />
+    <!-- Load jQuery before the custom script -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header Section  -->
+    <div id="header">h</div>
+
+    <!-- Breakdown Border -->
+    <div id="breakdown"></div>
+
+    <section id="BodySection">
+      <h1>Playing HTML Table</h1>
+    </section>
+
+    <!-- Breakdown Border -->
+    <div id="breakdown"></div>
+    <!-- Form Design-->
+    <section id="BodySection">
+      <h2>Personal Details</h2>
+      <form action="">
+        <div class="inputFieldWrapper">
+          <label for="name">Name</label>
+          <input type="text" placeholder="" />
+        </div>
+        <div class="inputFieldWrapper">
+          <label for="name">Email</label>
+          <input type="text" placeholder="" />
+        </div>
+        <div class="inputFieldWrapper">
+          <label for="name">Location</label>
+          <input type="text" placeholder="" />
+        </div>
+        <div class="gender">
+          <label for="gender">Gender</label>
+          <div id="gender">
+            <input name="gender" type="radio" value="female" />
+            <label for="Gender">Female</label>
+            <input name="gender" type="radio" value="male" />
+            <label for="Gender">Male</label>
+          </div>
+        </div>
+
+        <div class="country">
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="">Select Country</option>
+            <option value="nepal">Nepal</option>
+            <option value="india">India</option>
+            <option value="china">China</option>
+          </select>
+        </div>
+
+        <div class="textAreaWrapper">
+          <label for="other">Other Information</label>
+          <textarea name="comment" id="other" rows="6"></textarea>
+        </div>
+        <div class="inputFieldWrapper">
+          <span></span>
+          <div class="checkbox">
+            <input type="checkbox" style="padding: 10px" size="20" />
+            <label for="">I want to receive the newsletter</label>
+          </div>
+        </div>
+        <div class="inputFieldWrapper">
+          <span></span>
+          <div>
+            <button type="submit" id="button">SUBMIT</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- Breakdown Border -->
+    <div id="breakdown"></div>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script>
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Could not load file: ${filePath}`)
+            }
+            return response.text()
+          })
+          .then((html) => {
+            document.getElementById(elementId).innerHTML = html
+          })
+          .catch((error) => {
+            console.error("Error loading HTML:", error)
+          })
+      }
+
+      // Load the header and footer when the DOM is ready
+      document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("header", "/Day1/HTML/Header/Header.html")
+        loadHTML("footer", "/Day1/HTML/Footer/Footer.html")
+      })
+    </script>
+  </body>
+</html>

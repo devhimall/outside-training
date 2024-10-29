@@ -1,0 +1,65 @@
+form {
+  .inputFieldWrapper {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+
+    input {
+      padding: 15px;
+      grid-column: 2/4;
+    }
+
+    .checkbox {
+      grid-column: 2/4;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .gender,
+  .country {
+    padding: 0px 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+
+  #gender,
+  #country {
+    padding: 20px 0px;
+    grid-column: 2/4;
+    font-size: 16px;
+  }
+
+  /* text area wrapper */
+  .textAreaWrapper {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    textarea {
+      grid-column: 2/4;
+    }
+  }
+
+  #button {
+    padding: 20px 40px;
+    background-color: #838383;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+  }
+}

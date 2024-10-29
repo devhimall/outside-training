@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Day2/HTML/styles/zookeeperform.css" />
+  </head>
+  <body class="form-wrapper">
+    <header>
+      <h1>Zoo Keeper Application Form</h1>
+      <p>
+        Please complete the form. Mandatory fields are marked with a
+        <span>*</span>
+      </p>
+    </header>
+    <!-- input fields for CONTACT DETAILS-->
+    <section class="contact-details">
+      <fieldset>
+        <legend>Contact Details</legend>
+        <div>
+          <label for="">Name: <span>*</span></label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label for="">Telephone:</label>
+          <input type="number" id="tphone" name="tphone" />
+        </div>
+        <div>
+          <label for="">Email <span>*</span></label>
+          <input type="text" id="email" name="email" />
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- input fields for PERSONAL INFORMATION -->
+    <section class="personal-information">
+      <fieldset>
+        <legend>personal information</legend>
+        <div>
+          <label for=""> <span>*</span>Age</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label for="gender">gender</label>
+          <select name="gender" id="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </div>
+        <div>
+          <label for=""
+            >When did you first know you wanted to be a zoo-keeper?
+            <span>*</span></label
+          >
+          <textarea
+            name=""
+            id=""
+            style="grid-column: 2/4; height: 100px; padding: 10px"
+          ></textarea>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- input fields for PICK YOUR FAVOURITE ANIMALS -->
+    <sectionn class="favourite-animals">
+      <fieldset>
+        <legend>pick up your favourite animals</legend>
+        <ul>
+          <li>
+            <input type="checkbox" />
+            <label for="zebra">Zebra</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="cat">Cat</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="anaconda">anacolda</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="human">human</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="elephant">elephant</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="wildebeest">wildebeest</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="pigeon">pigeon</label>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <label for="crad">crab</label>
+          </li>
+        </ul>
+      </fieldset>
+    </sectionn>
+    <button>Submit Application</button>
+  </body>
+</html>

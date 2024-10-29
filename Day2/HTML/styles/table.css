@@ -1,0 +1,17 @@
+div {
+  h1 {
+    text-transform: capitalize;
+    padding: 10px 0px;
+  }
+
+  table {
+    width: 50%;
+
+    thead td {
+      padding: 20px;
+    }
+    tbody td {
+      padding: 20px;
+    }
+  }
+}
