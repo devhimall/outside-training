@@ -4,6 +4,7 @@
   header {
     p {
       font-style: italic;
+      color: #000;
       span {
         color: red;
         font-weight: 600;
@@ -33,7 +34,6 @@
         grid-template-columns: repeat(4, 1fr);
 
         label {
-          font-weight: 600;
           text-transform: capitalize;
           span {
             color: red;
