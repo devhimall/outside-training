@@ -1,0 +1,86 @@
+.form-wrapper {
+  max-width: 1440px;
+  margin: auto;
+  header {
+    p {
+      font-style: italic;
+      span {
+        color: red;
+        font-weight: 600;
+      }
+    }
+  }
+
+  section.contact-details,
+  .personal-information,
+  .favourite-animals {
+    margin: 20px 0px;
+
+    fieldset {
+      padding: 15px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 4px;
+
+      legend {
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        label {
+          font-weight: 600;
+          opacity: 0.7;
+          text-transform: capitalize;
+          span {
+            color: red;
+          }
+        }
+        select {
+          grid-column: 2/4;
+          padding: 10px;
+        }
+
+        input {
+          grid-column: 2/4;
+          padding: 10px;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+
+      li {
+        padding: 10px 0px;
+        text-transform: capitalize;
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+button {
+  border: 1px solid blue;
+  border-radius: 4px;
+  background-color: rgb(213, 206, 206);
+  padding: 15px 20px;
+  text-transform: capitalize;
+  color: #000;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  .form-wrapper {
+    width: 90%;
+  }
+}
