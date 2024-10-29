@@ -1,0 +1,119 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+div.container {
+  max-width: 1440px;
+  margin: auto;
+  margin-bottom: 100px;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    section.username {
+      h1 {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    section.user_address {
+      text-align: right;
+      font-size: 14px;
+    }
+  }
+
+  section.about {
+    p {
+      line-height: 25px;
+    }
+  }
+
+  section.experience {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .experience_subheading {
+      font-weight: 600;
+    }
+    .company_name {
+      color: grey;
+    }
+
+    ul {
+      padding: 15px;
+      li {
+        line-height: 25px;
+      }
+    }
+  }
+
+  section.education {
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-weight: 600;
+      }
+      span {
+        color: grey;
+      }
+    }
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  section.skills {
+    div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+
+      p {
+        border: 1px dashed grey;
+        padding: 15px;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+  }
+
+  section.languages {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding-left: 0px;
+
+      li {
+        list-style: none;
+        border: 1px dashed grey;
+        padding: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        .lang {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div.container {
+    width: 90%;
+  }
+}
