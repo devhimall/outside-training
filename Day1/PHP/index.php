@@ -1,3 +1,32 @@
+<?php
+$username_error = "";
+$age_error = "";
+$favourite_color = "";
+
+// Validating the username
+if (isset($_POST['submit'])) {
+    if (empty($_POST['name'])) {
+        $username_error = "Name is required";
+    }
+
+    // Validating the age
+    if (empty($_POST["age"])) {
+        $age_error = "Age should be enter";
+    } else {
+        if (is_numeric($_POST["age"])) {
+            // returning only integer not float
+            $name = (int)$_POST["age"];
+        } else {
+            // returning error if the user enter data is not a number.
+            $age_error = "Age should be number";
+        }
+    }
+
+    // Validating the age
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
