@@ -57,8 +57,7 @@ body {
   }
 }
 
-section.day1-assignments {
-  border: 1px solid red;
+.day1-assignments {
   padding: 20px 0px;
 
   a {
