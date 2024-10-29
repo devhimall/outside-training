@@ -56,3 +56,12 @@ body {
     text-decoration: none;
   }
 }
+
+section.day1-assignments {
+  border: 1px solid red;
+  padding: 20px 0px;
+
+  a {
+    list-style: none;
+  }
+}
