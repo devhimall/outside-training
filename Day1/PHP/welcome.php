@@ -1,3 +1,49 @@
+<?php
+if (isset($_GET['name']) && isset($_GET['age']) && isset($_GET['color'])) {
+    $username = htmlspecialchars($_GET['name']);
+    $userage = htmlspecialchars($_GET['age']);
+    $user_color = htmlspecialchars($_GET['color']);
+
+    echo "Hi, " . $username . "<br />";
+
+    // checking if the user is minor or adult
+    if ($userage) {
+        if ($age < 18) {
+            echo "You are a minor. <br />";
+        } else {
+            echo "You are an adult.<br />";
+        }
+    }
+
+    // Showing favourite color of user.
+    if ($user_color) {
+        switch ($user_color) {
+            case "red":
+                echo "Red is a bold choice.";
+                break;
+            case "blue":
+                echo "Blue is calming.";
+                break;
+            case "green":
+                echo "Green represents nature.";
+                break;
+            default:
+                echo "That's an interesting choice.";
+        }
+    }
+
+    // looping the number of times the user age.
+    if ($userage) {
+        echo "<h3>Here is the list of years you have lived:</h3> ";
+        for ($i = 0; $i <= $userage; $i++) {
+            if ($i > $userage - 1) {
+                echo "you are living your " . $i . "th year";
+            } else {
+                echo $i . "<br />";
+            }
+        }
+    } ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,73 +52,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?php
-        // Checking if 'name' is set before using it to prevent undefined index notices
-        echo isset($_POST['name']) ? strip_tags($_POST['name']) : 'Welcome';
-        ?>
+            // Checking if 'name' is set before using it to prevent undefined index notices
+            echo isset($_GET['name']) ? strip_tags($_GET['name']) : 'Welcome';
+            ?>
     </title>
     <link rel="stylesheet" href="./styles/welcome.css">
 </head>
 
 <body>
-    <p>
-        Hi,
-        <?php
-        // Safely outputting the user's name
-        if (isset($_POST["name"])) {
-            $output = strip_tags($_POST["name"]);
-            echo $output ? $output : "coder!!!.";
-        }
-
-        ?>
-    </p>
-    <p>
-        <?php
-        // Checking if 'age' is set before using it
-        if (isset($_POST["age"])) {
-            $age = (int)htmlspecialchars($_POST["age"], ENT_QUOTES, 'UTF-8'); // Cast to int after sanitization
-            if ($age < 18) {
-                echo "You are a minor.";
-            } else {
-                echo "You are an adult.";
-            }
-        }
-        ?>
-    </p>
-    <p>
-        <?php
-        // Checkig if 'color' is set before using it
-        if (isset($_POST["color"])) {
-            $color = htmlspecialchars($_POST["color"], ENT_QUOTES, 'UTF-8');
-            switch ($color) {
-                case "red":
-                    echo "Red is a bold choice.";
-                    break;
-                case "blue":
-                    echo "Blue is calming.";
-                    break;
-                case "green":
-                    echo "Green represents nature.";
-                    break;
-                default:
-                    echo "That's an interesting choice.";
-            }
-        }
-        ?>
-    </p>
-    <p>
-        <?php
-        // Checking if 'age' is set before using it
-        if (isset($_POST["age"])) {
-            echo "Here is a list of years you have lived: <br />";
-            $age = (int)$_POST["age"];
-
-            for ($i = 0; $i <= $age; $i++) {
-                echo "$i <br />";
-            }
-        }
-        ?>
-    </p>
-
     <div>
         <a href="/outside-training/Day1/PHP">Back</a>
         <a href="/outside-training/Day1/PHP">Next</a>
@@ -80,3 +67,7 @@
 </body>
 
 </html>
+
+<?php } else {
+    echo "<p>0 results.</p>";
+} ?>
