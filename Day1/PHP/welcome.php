@@ -44,29 +44,29 @@ if (isset($_GET['name']) && isset($_GET['age']) && isset($_GET['color'])) {
         }
     } ?>
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php
-            // Checking if 'name' is set before using it to prevent undefined index notices
-            echo isset($_GET['name']) ? strip_tags($_GET['name']) : 'Welcome';
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            <?php
+
+            echo $username ? $username : 'Welcome';
             ?>
-    </title>
-    <link rel="stylesheet" href="./styles/welcome.css">
-</head>
+        </title>
+        <link rel="stylesheet" href="./styles/welcome.css">
+    </head>
 
-<body>
-    <div>
-        <a href="/outside-training/Day1/PHP">Back</a>
-        <a href="/outside-training/Day1/PHP">Next</a>
-    </div>
-</body>
+    <body>
+        <div>
+            <a href="/outside-training/Day1/PHP">Back</a>
+            <a href="/outside-training/Day1/PHP">Next</a>
+        </div>
+    </body>
 
-</html>
+    </html>
 
 <?php } else {
     echo "<p>0 results.</p>";
