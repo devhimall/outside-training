@@ -1,0 +1,128 @@
+*,
+::before,
+::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+
+  h2 {
+    padding: 30px 0px;
+  }
+
+  /* assesment 5 */
+  .inline-block-wrapper {
+    height: 200px;
+    width: 100%;
+    /* by setting the font-size: 0; we can remove the whitespace between two inline-block element */
+    font-size: 0;
+
+    .inline,
+    .block {
+      background-color: green;
+      /* border: 1px solid red; */
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      font-size: 20px;
+      color: var(--white-color);
+      text-transform: capitalize;
+    }
+  }
+
+  /* assesment 6 */
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .img-left,
+    .img-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+
+      div.desc {
+        order: 1;
+        padding: 0px 15px;
+      }
+
+      .img-wrapper {
+        height: 275px;
+        width: 100%;
+        overflow: hidden;
+        order: 2;
+        img {
+          height: auto;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      div > h2 {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      div > p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .d-flex {
+      width: 1290px;
+      margin: auto;
+
+      .img-left,
+      .img-right {
+        flex-direction: row;
+        overflow: hidden;
+
+        .img-wrapper {
+          height: 380px;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        div > h2 {
+          font-size: 40px;
+        }
+        div > p {
+          font-size: 20px;
+        }
+      }
+
+      .img-left {
+        .img-wrapper {
+          order: 1;
+        }
+        div.desc {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+}
