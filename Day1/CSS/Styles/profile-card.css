@@ -1,0 +1,179 @@
+@import url("./global.css");
+
+body {
+  border: 1px solid var(--red-color);
+}
+
+.profile-card {
+  border: 1px solid blue;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(229, 200, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(229, 200, 103, 1) 0%,
+    rgba(212, 158, 69, 1) 51%,
+    rgba(200, 129, 45, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .profile-card__profile {
+    margin: 10px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 940px;
+
+    .profile-card__profile__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 50px 60px;
+      border: 1px solid red;
+
+      .profile-card__profile__left-image {
+        border: 1px solid var(--black-color);
+        height: 208px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 208px;
+
+        .profile-card__profile__left-image__image {
+          height: 200px;
+          width: 200px;
+          border: 1px solid var(--black-color);
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .profile-card__profile__left-image__image-border3 {
+            overflow: hidden;
+            height: 192px;
+            width: 192px;
+            border-radius: 100%;
+          }
+
+          img {
+            object-fit: contain;
+            object-position: top;
+          }
+        }
+      }
+
+      /* Bio of the profile styles */
+
+      .profile-card__profile__left-bio {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        margin-bottom: 40px;
+
+        .profile-card__profile__left-heading {
+          font-size: 48px;
+          line-height: 65px;
+          font-weight: 600;
+          color: var(--profile-card-color);
+        }
+
+        .profile-card__profile__left-description {
+          color: var(--profile-card-color);
+        }
+      }
+
+      /* follow and message button styles */
+      .profile-card__profile__left-socials {
+        /* border: 1px solid red; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        .profile-card__profile__left-socials__follow,
+        .profile-card__profile__left-socials__message {
+          padding: 15px;
+          border: 2px solid #7c6957;
+          border-radius: 50px;
+          text-transform: capitalize;
+          background-color: transparent;
+          color: #7c6957;
+          font-weight: 600;
+          font-size: 24px;
+
+          &:hover {
+            color: var(--white-color);
+            background-color: #7c6957;
+            transition: all 500ms ease-in-out;
+          }
+        }
+      }
+    }
+
+    .profile-card__profile__right {
+      display: grid;
+      gap: 5px;
+      flex-direction: column;
+      height: 50%;
+      margin-top: 5px;
+      margin: 25px;
+
+      .profile-card__profile__right__posts,
+      .profile-card__profile__right__likes,
+      .profile-card__profile__right__followers {
+        height: 294px;
+        border: none;
+        background-color: var(--profile-btn-bg-primary-color);
+        color: var(--profile-card-color);
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 50px;
+
+        p {
+          color: var(--profile-card-color);
+          font-weight: 400;
+        }
+        &:hover {
+          background-color: var(--profile-btn-bg-hover-color);
+          transition: all 500ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profile-card {
+    .profile-card__profile {
+      grid-template-columns: repeat(2, 1fr);
+      .profile-card__profile__left {
+      }
+      .profile-card__profile__right {
+        margin: 0px;
+        margin-left: 20%;
+        height: auto;
+
+        .profile-card__profile__right__posts,
+        .profile-card__profile__right__likes,
+        .profile-card__profile__right__followers {
+          height: auto;
+        }
+      }
+    }
+  }
+}

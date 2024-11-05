@@ -11,8 +11,16 @@
 :root {
   --white-color: #ffffff;
   --black-color: #000000;
-  --red-color: #e70606;
+  /* landing page */
+  --dark-blue: #00001a;
+  --hover-color: #e9ab53;
+  --breakdown-color: #5e607a;
+  --button-color: #f15e50;
+  --text-color: #FFEBCC;
 
+  /* end of landing page */
+  --red-color: #e70606;
+  --profile-card-color: #7c6957;
   --grey-color: #d9d9d9;
   --background-color: #3a3a3a;
   --lightgrey-color: #575757;
@@ -24,6 +32,11 @@
   --first-button-color: #515151;
   --third-button-color: #40433c;
   --fourth-button-color: #b75f5f;
+
+  /* profile card color */
+
+  --profile-btn-bg-primary-color: #f5e8df;
+  --profile-btn-bg-hover-color: #cbbfb6;
 }
 
 /* styles for assesment 6 */
