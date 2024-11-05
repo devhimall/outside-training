@@ -4,12 +4,27 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 :root {
   --white-color: #ffffff;
   --black-color: #000000;
+  --grey-color: #d9d9d9;
+  --background-color: #3a3a3a;
+  --lightgrey-color: #575757;
+  --title-color: #212121;
+  --muted-blue: #e4f2ff;
+  --green-blue: #d1dfbf;
+  --light-pink: #f9dbdb;
+  --second-button-color: #0047ff;
+  --first-button-color: #515151;
+  --third-button-color: #40433c;
+  --fourth-button-color: #b75f5f;
 }
+
+/* styles for assesment 6 */
 
 .container {
   min-height: 100vh;
@@ -17,6 +32,7 @@
 
   h2 {
     padding: 30px 0px;
+    font-size: 28px;
   }
 
   /* assesment 5 */
@@ -71,7 +87,7 @@
       }
 
       div > h2 {
-        font-size: 25px;
+        font-size: 28px;
         font-weight: 600;
       }
       div > p {
@@ -81,7 +97,230 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  /* assesment 7 */
+
+  .d-grid {
+    padding: 0px 10px;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    header,
+    footer {
+      background-color: var(--black-color);
+
+      p,
+      h3 {
+        color: var(--white-color);
+        text-align: center;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+
+    aside.left,
+    nav,
+    main {
+      background-color: var(--grey-color);
+      color: var(--black-color);
+      font-weight: 600;
+    }
+
+    aside.left,
+    nav,
+    main,
+    footer,
+    aside.right,
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    header {
+      order: 1;
+      grid-column: 1 / span 5;
+      text-align: center;
+    }
+
+    nav {
+      order: 2;
+      grid-column: 1 / span 5;
+    }
+    main {
+      order: 3;
+      grid-column: 1 / span 5;
+      grid-row: 3 / span 7;
+    }
+    aside.right {
+      order: 4;
+      background-color: #755e7b;
+      color: var(--white-color);
+      text-align: center;
+      grid-column: 1 / span 5;
+    }
+    aside.left {
+      order: 5;
+      grid-column: 1 / span 5;
+    }
+    footer {
+      order: 6;
+      grid-column: 1 / span 5;
+    }
+  }
+
+  /* assesment 9 */
+
+  .check-list-wrapper {
+    padding: 0px 10px;
+    min-height: 40vh;
+    height: 100%;
+
+    ul {
+      height: 100%;
+      /* removing the default listing style so that we can add it through pseudo class  */
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      li::before {
+        content: "\2713";
+        background-color: var(--black-color);
+        color: var(--white-color);
+        height: 10px;
+        width: 10px;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 100%;
+        font-size: 14px;
+      }
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* assesment  10*/
+  .clamp-wrapper {
+    padding: 0px 10px;
+    .clamp {
+      h2 {
+        font-size: clamp(2rem, 2.5vw, 4rem);
+      }
+      p {
+        font-size: clamp(1rem, 1.2vw, 2rem);
+        line-height: 2rem;
+      }
+    }
+    .min-max {
+      margin-top: 30px;
+
+      h2 {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+        line-height: 2rem;
+      }
+      p {
+        border: 1px solid red;
+        padding: 10px;
+        width: max(320px, 90%);
+        font-size: clamp(1rem, 1.2vw, 2rem);
+        line-height: 2rem;
+      }
+    }
+  }
+
+  /* assesment 11 */
+  .animated-shape {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    margin: 50px auto;
+    animation: morphShape 3s infinite alternate;
+  }
+
+  /* assesment 12 */
+  div.tooltip-wrapper {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      border: 1px solid red;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      custom-icon-size:hover {
+        border: 1px solid red;
+        cursor: pointer;
+      }
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .cow:hover {
+      border: 1px solid red;
+      -webkit-text-fill-color: red;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes morphShape {
+  0% {
+    border-radius: 100%;
+    transform: scale(0.2);
+    background-color: lightgreen;
+  }
+  50% {
+    border-radius: 50%;
+    background-color: grey;
+  }
+  100% {
+    border-radius: 0;
+    background-color: pink;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    .d-grid {
+      aside.left {
+        order: 3;
+        grid-row: 3 / span 7;
+        grid-column: 1;
+      }
+      main {
+        order: 4;
+        grid-column: 2 / span 4;
+      }
+      aside.right {
+        order: 6;
+        grid-column: 5;
+      }
+      footer {
+        order: 5;
+        grid-column: 1 / span 4;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 30px;
     .d-flex {
       width: 1290px;
       margin: auto;
@@ -103,6 +342,7 @@
 
         div > h2 {
           font-size: 40px;
+          line-height: 40px;
         }
         div > p {
           font-size: 20px;
@@ -121,8 +361,32 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .container {
-    padding: 30px;
+    .d-grid {
+      aside.left {
+        order: 2;
+        grid-row: 2 / span 8;
+      }
+
+      nav {
+        order: 3;
+        grid-column: 2 / 5;
+      }
+
+      main {
+        order: 5;
+        grid-column: 2 / 5;
+      }
+
+      aside.right {
+        order: 4;
+        grid-row: 2 / span 8;
+      }
+      footer {
+        order: 6;
+        grid-column: 1 / 6;
+      }
+    }
   }
 }
