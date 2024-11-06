@@ -16,9 +16,14 @@
   --hover-color: #e9ab53;
   --breakdown-color: #5e607a;
   --button-color: #f15e50;
-  --text-color: #FFEBCC;
+  --text-color: #ffebcc;
 
   /* end of landing page */
+
+  /* price card */
+  --background-grey: #e9edef;
+  --progressbar-color: transparent;
+  /* end of price card */
   --red-color: #e70606;
   --profile-card-color: #7c6957;
   --grey-color: #d9d9d9;
