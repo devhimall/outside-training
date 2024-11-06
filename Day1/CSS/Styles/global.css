@@ -49,10 +49,111 @@
 .container {
   min-height: 100vh;
   width: 100vw;
+  overflow: hidden;
 
   h2 {
     padding: 30px 0px;
     font-size: 28px;
+  }
+
+  /* assesment 1 */
+  .assesment1 {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    list-style: none;
+
+    li {
+      line-height: 30px;
+      /* using :hover selector for li */
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* selecting form input field in focus mode */
+
+    input:focus {
+      outline: none;
+      border: 1px solid blue;
+      padding: 10px;
+      width: 50%;
+    }
+
+    /* disabled button */
+    button {
+      padding: 10px;
+      text-transform: capitalize;
+    }
+    button:disable {
+      opacity: 0.8;
+    }
+    /* apart form this, we can use so many other form selectors based on their validaton status such as  */
+    /* input:valid {
+      border: 2px solid green;
+    }
+
+    input:invalid {
+      border: 2px solid red;
+    } */
+
+    /* Level 4 Selectors: */
+
+    /*  :is() — A function that matches any selector passed to it.
+        :where() — Similar to :is(), but with zero specificity.
+        :not() — Negates a selector.
+          Example:
+
+                :is(h1, h2, h3) {
+                 color: blue;
+                 }
+                  a:not([href]) {
+                  color: gray;
+                     }
+        } */
+  }
+
+  /* assesment 2 */
+  .padding {
+    border: 1px solid red;
+    border-radius: 10px;
+    /* regular padding example */
+    .regular {
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-bottom: 30px;
+      padding-right: 50px;
+    }
+
+    /* logical padding example */
+    .logical {
+      padding-inline: 50px;
+      padding-block: 40px;
+    }
+  }
+
+  /* assesment 3 */
+  .box-sizing {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .content-box {
+      width: 200px;
+      border: 10px solid black;
+      padding: 20px;
+      box-sizing: content-box;
+      /* width = 200px + 10px + 20px*/
+    }
+
+    .border-box {
+      width: 200px;
+      padding: 20px;
+      border: 10px solid black;
+      box-sizing: border-box;
+      /* width = 200px */
+    }
   }
 
   /* assesment 5 */
@@ -81,6 +182,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    border: 1px solid redr;
 
     .img-left,
     .img-right {
@@ -265,35 +367,73 @@
   }
 
   /* assesment 12 */
-  div.tooltip-wrapper {
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    div {
-      border: 1px solid red;
-      width: fit-content;
+  .tooltip-wrapper {
+    .tooltip-container {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 30px;
+      justify-content: center;
+      gap: 100px;
+      padding: 50px 0px;
+      position: relative;
 
-      custom-icon-size:hover {
-        border: 1px solid red;
+      .icons:hover {
+        .warning-tooltip,
+        .fingerprint-tooltip,
+        .cow-tooltip {
+          opacity: 1;
+          pointer-events: auto;
+          top: -20px;
+        }
+      }
+
+      #fingerprint:hover {
+        fill: red;
         cursor: pointer;
       }
-    }
 
-    img {
-      height: 50px;
-      width: 50px;
-    }
+      .icons {
+        .warning-tooltip,
+        .fingerprint-tooltip,
+        .cow-tooltip {
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          border-radius: 4px;
+          width: 150px;
+          text-align: center;
+          position: absolute;
+          top: 0px;
+          color: var(--white-color);
+          opacity: 0;
+          pointer-events: none;
+          font-weight: 800;
+          transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .warning-tooltip {
+          background-color: var(--black-color);
+        }
+        .fingerprint-tooltip {
+          background-color: red;
+        }
+        .cow-tooltip {
+          background-color: var(--black-color);
+        }
+      }
 
-    .cow:hover {
-      border: 1px solid red;
-      -webkit-text-fill-color: red;
-      cursor: pointer;
+      .background-image {
+        height: 24px;
+        width: 24px;
+        background-image: url("/Day1/CSS/assets/icons/animal.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .tooltip-icon:hover {
+        cursor: pointer;
+      }
     }
   }
 }
