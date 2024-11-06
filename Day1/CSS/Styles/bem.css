@@ -231,7 +231,7 @@ body {
             text-align: start;
             padding-right: 20%;
           }
-          .features__items-item-image{
+          .features__items-item-image {
             height: 320px;
             width: 320px;
           }
@@ -257,12 +257,12 @@ body {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    .features{
-      .features__items{
-        .features__items-item{
-          .features__items-item-image{
-            height: 420px;
-            width: 420px;
+    .features {
+      .features__items {
+        .features__items-item {
+          .features__items-item-image {
+            height: 320px;
+            width: 320px;
           }
         }
       }

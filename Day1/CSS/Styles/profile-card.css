@@ -35,37 +35,64 @@ body {
       align-items: center;
       gap: 30px;
       padding: 50px 60px;
-      border: 1px solid red;
 
-      .profile-card__profile__left-image {
-        border: 1px solid var(--black-color);
-        height: 208px;
+      .profile-card__profile__left-image-container {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 100%;
-        width: 208px;
 
-        .profile-card__profile__left-image__image {
-          height: 200px;
-          width: 200px;
-          border: 1px solid var(--black-color);
-          border-radius: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .profile-card__profile__left-image__image-border3 {
-            overflow: hidden;
-            height: 192px;
-            width: 192px;
-            border-radius: 100%;
+        &:hover {
+          .profile-card__profile__left-image,
+          .profile-card__profile__left-image__image {
+            animation: animate-right 5s infinite alternate;
           }
+        }
+
+        .profile-card__profile__left-image__image-border3 {
+          overflow: hidden;
+          height: 192px;
+          width: 192px;
+          border-radius: 100%;
+
+          background: red;
 
           img {
             object-fit: contain;
             object-position: top;
           }
+        }
+
+        /* border 1 */
+
+        .profile-card__profile__left-image {
+          border: 1px solid var(--black-color);
+          width: 210px;
+          height: 210px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          position: absolute;
+          border-right: 2px solid red;
+          border-bottom: 2px solid red;
+          border-top: 2px solid red;
+          border-left: none;
+        }
+
+        /* border 2 */
+        .profile-card__profile__left-image__image {
+          height: 200px;
+          width: 200px;
+          border-left: 1px solid var(--black-color);
+          border-top: 1px solid var(--black-color);
+          border-bottom: 1px solid var(--black-color);
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: animate-right 3s infinite alternate;
+          position: absolute;
         }
       }
 
@@ -175,5 +202,15 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes animate-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
   }
 }
