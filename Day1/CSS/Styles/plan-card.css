@@ -1,0 +1,325 @@
+@import url("./global.css");
+
+:root {
+  --progress-width: 0%;
+  --color: #7dd0ed;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-grey);
+}
+
+.plan-card {
+  width: 80%;
+  height: 100%;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .plan-card__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+
+    .plan-card__items__item {
+      background-color: var(--white-color);
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-bottom: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      transition: all 300ms ease-in-out;
+
+      .plan-card__items__item__heading {
+        background-color: #7dd0ed;
+        height: 77px;
+        line-height: 77px;
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--white-color);
+      }
+
+      .plan-card__items__item__price {
+        h2 {
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 77px;
+          color: #5f5f5f;
+        }
+        p {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 30px;
+          color: #5f5f5f;
+        }
+      }
+
+      .plan-card__items__item__features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          color: #9a9a9a;
+          font-size: 18px;
+        }
+      }
+
+      /* Hover effect for each item */
+      &:hover {
+        scale: 1.1;
+        transition: all 300ms ease-in-out;
+
+        .plan-card__items__item__heading {
+          background-color: #27a6d2;
+          transition: all 500ms ease-in-out;
+        }
+
+        .plan-card__items__item__price {
+          h2 {
+            color: #27a6d2;
+            transition: all 500ms ease-in-out;
+          }
+          p {
+            color: #27a6d2;
+            transition: all 500ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .plan-card__features {
+    background-color: #ffffff;
+    height: fit-content;
+    border-radius: 8px;
+
+    .plan-card__features__users,
+    .plan-card__features__storage,
+    .plan-card__features__projects {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .plan-card__features__users-spans,
+      .plan-card__features__storage-spans,
+      .plan-card__features__projects-spans {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          font-size: 30px;
+          font-weight: 400;
+          line-height: 37px;
+          color: #5f5f5f;
+        }
+      }
+
+      .plan-card__features__users-progressbar,
+      .plan-card__features__storage-progressbar,
+      .plan-card__features__projects-progressbar {
+        background-color: #e9edef;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 20px;
+
+        .fill,
+        .fill {
+          width: var(--progress-width);
+          height: 100%;
+          border-radius: 20px;
+          background-color: var(--color);
+        }
+      }
+    }
+  }
+}
+
+.plan-card__items:has(#first-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__users
+  .plan-card__features__users-progressbar
+  .fill {
+  --progress-width: 15%;
+  animation: usersbar 3s alternate;
+}
+
+@keyframes usersbar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+
+.plan-card__items:has(#first-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__storage
+  .plan-card__features__storage-progressbar
+  .fill {
+  --progress-width: 30%;
+  animation: storage 3s alternate;
+}
+
+@keyframes storage {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+.plan-card__items:has(#first-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__projects
+  .plan-card__features__projects-progressbar
+  .fill {
+  --progress-width: 10%;
+  animation: projects 3s alternate;
+}
+
+@keyframes projects {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+/* second child hover */
+.plan-card__items:has(#second-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__users
+  .plan-card__features__users-progressbar
+  .fill {
+  --progress-width: 30%;
+  animation: usersbar2 3s alternate;
+}
+
+@keyframes usersbar2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+.plan-card__items:has(#second-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__storage
+  .plan-card__features__storage-progressbar
+  .fill {
+  --progress-width: 50%;
+  animation: storage2 3s alternate;
+}
+
+@keyframes storage2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.plan-card__items:has(#second-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__projects
+  .plan-card__features__projects-progressbar
+  .fill {
+  --progress-width: 80%;
+  animation: projects2 3s alternate;
+}
+
+@keyframes projects2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* premium hover */
+.plan-card__items:has(#third-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__users
+  .plan-card__features__users-progressbar
+  .fill {
+  --progress-width: 100%;
+  animation: usersbar3 3s alternate;
+}
+
+@keyframes usersbar3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.plan-card__items:has(#third-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__storage
+  .plan-card__features__storage-progressbar
+  .fill {
+  --progress-width: 100%;
+  animation: storage3 3s alternate;
+}
+
+@keyframes storage3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.plan-card__items:has(#third-child:hover)
+  ~ .plan-card__features
+  .plan-card__features__projects
+  .plan-card__features__projects-progressbar
+  .fill {
+  --progress-width: 100%;
+  animation: projects3 3s alternate;
+}
+
+@keyframes projects3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .plan-card {
+    .plan-card__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .plan-card {
+    .plan-card__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
