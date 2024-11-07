@@ -10,6 +10,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: var(--background-grey);
+  font-family: "Inder", sans-serif;
 }
 
 .plan-card {
