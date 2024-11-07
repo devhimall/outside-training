@@ -2,6 +2,7 @@
 
 body {
   border: 1px solid var(--red-color);
+  font-family: "Open Sans", sans-serif;
 }
 
 .profile-card {
@@ -66,7 +67,6 @@ body {
         /* border 1 */
 
         .profile-card__profile__left-image {
-          border: 1px solid var(--black-color);
           width: 210px;
           height: 210px;
           display: flex;
@@ -74,9 +74,9 @@ body {
           align-items: center;
           border-radius: 100%;
           position: absolute;
-          border-right: 2px solid red;
-          border-bottom: 2px solid red;
-          border-top: 2px solid red;
+          border-right: 2px solid #8e7e6d;
+          border-bottom: 2px solid #8e7e6d;
+          border-top: 2px solid #8e7e6d;
           border-left: none;
         }
 
@@ -84,14 +84,13 @@ body {
         .profile-card__profile__left-image__image {
           height: 200px;
           width: 200px;
-          border-left: 1px solid var(--black-color);
-          border-top: 1px solid var(--black-color);
-          border-bottom: 1px solid var(--black-color);
+          border-left: 2px solid #8e7e6d;
+          border-top: 2px solid #8e7e6d;
+          border-bottom: 2px solid #8e7e6d;
           border-radius: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-          animation: animate-right 3s infinite alternate;
           position: absolute;
         }
       }
